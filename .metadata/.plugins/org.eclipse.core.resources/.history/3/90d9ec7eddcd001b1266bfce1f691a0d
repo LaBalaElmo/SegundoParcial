@@ -20,7 +20,7 @@ public class Ordenar1 implements IOrdenar {
 			}
 		}
 
-		for (Usuario usuario : aux) {
+		for (Usuario usuario : u) {
 			usuario.info();
 		}
 	}

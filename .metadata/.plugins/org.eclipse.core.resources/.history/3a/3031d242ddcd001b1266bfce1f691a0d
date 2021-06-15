@@ -1,0 +1,26 @@
+package segundoParcial.strategy;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Ordenar1 implements IOrdenar {
+
+	@Override
+	public void execute(List<Usuario> u) {	
+		List<Usuario> aux = new ArrayList<>();
+		for(int i = 0; i < u.size(); i++ ) {
+			aux.add(u.get(i));
+			if(i+1 < u.size()) {
+				if (u.get(i).getCi() < u.get(i+1).getCi()) {
+					aux.add()
+				}
+				
+			}
+		}
+		
+		for (Usuario usuario : u) {
+			usuario.info();
+		}
+	}
+
+}

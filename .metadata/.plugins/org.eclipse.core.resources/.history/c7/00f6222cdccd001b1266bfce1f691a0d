@@ -11,7 +11,5 @@ public class Client {
 		b.addUsuario(u3);
 		
 		b.setStrategy(new Ordenar1());
-		
-		b.execute();
 	}
 }

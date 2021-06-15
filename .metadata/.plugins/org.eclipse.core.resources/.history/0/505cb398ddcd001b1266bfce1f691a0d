@@ -1,0 +1,11 @@
+package segundoParcial.strategy;
+
+
+public class Ordenar1 implements IOrdenar {
+
+	@Override
+	public void execute(List<Usuario> u) {
+
+	}
+
+}
