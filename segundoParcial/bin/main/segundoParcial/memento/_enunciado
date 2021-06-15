@@ -1,0 +1,7 @@
+Se tiene un archivo que se versiona automaticamente cada vez que se
+tiene 5 palabras y el orden de su alias para el versionamiento es : version1, version2,
+version3, etc. adicionar las siguientes 3 oracionaes y luego volver a la version1
+“este documento es una prueba” ---> se versiona
+“el exito solo depende de tu esfuerzo” ---> se version
+“prologo” ---> no se versiona
+“este documento fue actualizado satisfactoriamente ” -> se versiona

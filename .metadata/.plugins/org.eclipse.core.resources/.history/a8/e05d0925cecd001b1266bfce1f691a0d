@@ -1,0 +1,8 @@
+package segundoParcial.memento;
+
+public class Archivo {
+	private String verion;
+	private String contenido;
+	priavte String titulo;
+
+}

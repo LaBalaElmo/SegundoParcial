@@ -1,0 +1,16 @@
+package segundoParcial.memento;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Saver {
+	private Map<String ,Memento> stateSaved = new HashMap<>();
+
+	public void addMemento(String version, Memento memento) {
+		stateSaved.put(version, memento);
+	}
+
+	public Memento getMemento(int statePosition) {
+		return stateSaved.get(statePosition);
+	}
+}

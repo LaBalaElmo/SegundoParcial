@@ -1,0 +1,5 @@
+package segundoParcial.chainOfResponsability;
+
+public abstract class Colleague {
+
+}

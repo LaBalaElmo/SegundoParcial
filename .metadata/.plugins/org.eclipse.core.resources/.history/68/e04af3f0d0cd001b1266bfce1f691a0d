@@ -1,0 +1,10 @@
+package segundoParcial.memento;
+
+public class Client {
+	public static void main(String[] args) {
+		Originator originator = new Originator();
+		Saver saver = new Saver(originator);
+		
+		Archivo a1 = new Archivo(1, "");
+	}
+}

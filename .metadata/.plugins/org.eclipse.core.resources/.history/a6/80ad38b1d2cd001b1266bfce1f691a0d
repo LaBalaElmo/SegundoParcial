@@ -1,0 +1,19 @@
+package segundoParcial.chainOfResponsability;
+
+public class Estudiante extends Colleague {
+	private int numMatricula;
+	private String nombre;
+	public Estudiante(IChat mediator) {
+		super(mediator);
+	}
+
+	@Override
+	public void send(String message) {
+		mediator.send(message, this);
+	}
+
+	@Override
+	public void messageReceived(String message) {
+		System.out.println("INFO - Message Received C1 > " + message);
+	}
+}

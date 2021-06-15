@@ -1,0 +1,32 @@
+package segundoParcial.memento;
+
+public class Archivo {
+	private String verion;
+	private String contenido;
+	private String titulo;
+
+	public String getVerion() {
+		return verion;
+	}
+
+	public void setVerion(String verion) {
+		this.verion = verion;
+	}
+
+	public String getContenido() {
+		return contenido;
+	}
+
+	public void setContenido(String contenido) {
+		this.contenido = contenido;
+	}
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+}

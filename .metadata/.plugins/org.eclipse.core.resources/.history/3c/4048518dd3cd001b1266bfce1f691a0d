@@ -1,0 +1,12 @@
+package segundoParcial.chainOfResponsability;
+import java.util.ArrayList;
+import java.util.List;
+
+public class ChatEscolar implements IChat {
+	private List<Estudiante> estudiantes = new ArrayList<>();
+
+    @Override
+    public void send(String message, Colleague colleague) {
+         
+    }
+}
