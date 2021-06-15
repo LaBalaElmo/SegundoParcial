@@ -1,0 +1,10 @@
+package segundoParcial.strategy;
+
+public class Usuario {
+	private int ci;
+	private String nombre;
+	private int fechaNacimiento;
+	private String profesion;
+	
+	
+}

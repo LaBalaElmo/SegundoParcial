@@ -1,0 +1,11 @@
+package segundoParcial.strategy;
+
+public class BaseDeDatos {
+    private IOrdenar strategy;
+
+    public BaseDeDatos(){}
+
+    public void execute(){
+        this.strategy.execute();
+    }
+}

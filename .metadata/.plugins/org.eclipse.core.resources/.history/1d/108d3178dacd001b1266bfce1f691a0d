@@ -1,0 +1,22 @@
+package segundoParcial.strategy;
+
+public class Usuario {
+	private int ci;
+	private String nombre;
+	private int fechaNacimiento;
+	private String profesion;
+
+	public Usuario(int ci, String nombre, int fechaNacimiento, String profesion) {
+		this.ci = ci;
+		this.nombre = nombre;
+		this.fechaNacimiento = fechaNacimiento;
+		this.profesion = profesion;
+	}
+	
+	public void info() {
+		System.out.println("CI: " +ci );
+		System.out.println("Nombre: " + nombre);
+		System.out.println("Fecha de nacimiento: " + fechaNacimiento);
+	}
+
+}

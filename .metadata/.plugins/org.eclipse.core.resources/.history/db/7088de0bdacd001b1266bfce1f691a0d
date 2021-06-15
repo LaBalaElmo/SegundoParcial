@@ -1,0 +1,5 @@
+package segundoParcial.strategy;
+
+public interface IOrdenar {
+	void execute();
+}

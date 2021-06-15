@@ -1,0 +1,25 @@
+package segundoParcial.strategy;
+
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+public class Ordenar1 implements IOrdenar {
+
+	@Override
+	public void execute(List<Usuario> u) {
+		Collections.sort(u, new Comparator<Usuario>() {
+			@Override
+			public int compare(Calle o1, Calle o2) {
+				return o1.getCodigo().compareTo(o2.getCodigo());
+			}
+
+			@Override
+			public int compare(Usuario o1, Usuario o2) {
+				// TODO Auto-generated method stub
+				return 0;
+			}
+		});
+	}
+
+}
