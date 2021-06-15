@@ -1,0 +1,29 @@
+package segundoParcial.observer;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class PaginaWeb implements  ISubject{
+    private List<IObserver> observerList= new ArrayList<>();
+
+    @Override
+    public void attach(IPersona observer) {
+        observerList.add(observer);
+    }
+
+    @Override
+    public void deattach(IObserver observer) {
+       observerList.remove(observer);
+    }
+
+    /*
+    notify observer when the attribute2 is updated
+     */
+    @Override
+    public void notifyObserver() {
+        for (IObserver observer:observerList
+             ) {
+            observer.update(attribute2);
+        }
+    }
+}

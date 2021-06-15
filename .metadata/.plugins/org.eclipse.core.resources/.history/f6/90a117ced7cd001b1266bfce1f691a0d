@@ -1,0 +1,33 @@
+package segundoParcial.observer;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class PaginaWeb implements IPagina {
+	private List<IPersona> observerList = new ArrayList<>();
+	
+	public void publicarVideo(String titulo) {
+		notifyObserver("Se publico un video con el titulo: " + titulo);
+	}
+	
+	public void usuariosSuscritos() {
+		notifyObserver("Se suscribieron 5 usuarios");
+	}
+
+	@Override
+	public void attach(IPersona observer) {
+		observerList.add(observer);
+	}
+
+	@Override
+	public void deattach(IPersona observer) {
+		observerList.remove(observer);
+	}
+
+	@Override
+	public void notifyObserver(String message) {
+		for (IPersona observer : observerList) {
+			observer.update(message);
+		}
+	}
+}

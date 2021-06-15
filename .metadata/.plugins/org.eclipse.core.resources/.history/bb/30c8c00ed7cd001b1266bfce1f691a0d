@@ -1,0 +1,27 @@
+package segundoParcial.observer;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class PaginaWeb implements  IPagina{
+    private List<IPersona> observerList= new ArrayList<>();
+
+    @Override
+    public void attach(IPersona observer) {
+        observerList.add(observer);
+    }
+
+    @Override
+    public void deattach(IPersona observer) {
+       observerList.remove(observer);
+    }
+
+
+    @Override
+    public void notifyObserver() {
+        for (IPersona observer:observerList
+             ) {
+            observer.update(attribute2);
+        }
+    }
+}

@@ -1,0 +1,11 @@
+package segundoParcial.chainOfResponsability;
+
+public class Client {
+	public static void main(String[] args) {
+		ChatEscolar chat = new ChatEscolar();
+		
+		Estudiante e = new Estudiante(chat, 1, "Juan");
+		
+		Docente d = new Docente(chat, 1, "Pedro")
+	}
+}

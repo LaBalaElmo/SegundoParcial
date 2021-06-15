@@ -2,3 +2,5 @@
 1623757941015	Encapsulate field 'originator'
 1623758025309	Encapsulate field 'archivo'
 1623759159644	Rename field 'numMatricula'
+1623760986367	Encapsulate field 'nombre'
+1623761118377	Encapsulate field 'categoria'

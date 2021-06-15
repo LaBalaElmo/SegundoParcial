@@ -1,0 +1,5 @@
+package segundoParcial.observer;
+
+public interface IPagina {
+
+}

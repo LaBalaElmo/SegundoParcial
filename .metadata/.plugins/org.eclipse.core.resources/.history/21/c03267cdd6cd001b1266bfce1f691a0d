@@ -1,0 +1,7 @@
+package segundoParcial.observer;
+
+public interface IPagina {
+	void attach(IObserver observer);
+    void deattach(IObserver observer);
+    void notifyObserver();
+}

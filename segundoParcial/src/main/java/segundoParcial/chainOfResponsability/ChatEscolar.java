@@ -44,10 +44,59 @@ public class ChatEscolar implements IChat {
 		this.administrativo = administrativo;
 	}
 
+	public void send(String message, String to) {
+		if (to.equals("docente")) {
+			for (Docente d : docentes) {
+				d.messageReceived(message);
+			}
+		}
+		if (to.equals("administrativo")) {
+			for (Administrativo a : administrativo) {
+				a.messageReceived(message);
+			}
+		}
+	}
+
 	@Override
 	public void send(String message, Colleague colleague) {
-		if(colleague instanceof Estudiante) {
-			
+		if (colleague instanceof Estudiante) {
+			for (Estudiante e : estudiantes) {
+				if (e != colleague) {
+					e.messageReceived(message);
+				}
+			}
+			for (Administrativo a : administrativo) {
+				a.messageReceived(message);
+			}
+			for (Docente d : docentes) {
+				d.messageReceived(message);
+			}
+		}
+
+		if (colleague instanceof Docente) {
+			for (Docente d : docentes) {
+				if (d != colleague) {
+					d.messageReceived(message);
+				}
+			}
+			for (Estudiante e : estudiantes) {
+				e.messageReceived(message);
+			}
+		}
+
+		if (colleague instanceof Administrativo) {
+			for (Docente d : docentes) {
+				d.messageReceived(message);
+			}
+			for (Estudiante e : estudiantes) {
+				e.messageReceived(message);
+			}
+			for (Administrativo a : administrativo) {
+				if (a != colleague) {
+					a.messageReceived(message);
+				}
+			}
+
 		}
 
 	}

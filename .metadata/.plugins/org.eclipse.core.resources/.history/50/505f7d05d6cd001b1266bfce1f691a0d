@@ -1,0 +1,22 @@
+package segundoParcial.chainOfResponsability;
+
+public class Client {
+	public static void main(String[] args) {
+		ChatEscolar chat = new ChatEscolar();
+		
+		Estudiante e = new Estudiante(chat, 1, "Juan");
+		Estudiante e1 = new Estudiante(chat, 2, "Juan1");
+		
+		Docente d = new Docente(chat, 1, "Pedro");
+		
+		Administrativo a = new Administrativo(chat, "director", "Jose");
+		
+		chat.addAdministrativo(a);
+		chat.addDocente(d);
+		chat.addEstudiante(e);
+		
+		e.send("hola", "administrativo");
+		e.send("hola", "docente");
+		e.send("Hola a todos");
+	}
+}

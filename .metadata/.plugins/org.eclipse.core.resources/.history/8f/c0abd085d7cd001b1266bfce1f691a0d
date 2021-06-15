@@ -1,0 +1,24 @@
+package segundoParcial.observer;
+
+public class Persona implements IPersona {
+	private String nombre;
+
+	public Persona(String nombre) {
+		super();
+		this.setNombre(nombre);
+	}
+
+	@Override
+	public void update(String message) {
+		System.out.println("Nombre: " + nombre);
+		System.out.println("Notificando: " + message);
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+}
